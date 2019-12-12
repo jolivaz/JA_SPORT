@@ -5,9 +5,9 @@ export const searchProductsAction = search => {
     }
 }
 
-export const addProductsAction = products => {
+export const updateProductsAction = products => {
     return {
-        type: 'ADD_PRODUCTS',
+        type: 'UPDATE_PRODUCTS',
         payload: products
     }
 }

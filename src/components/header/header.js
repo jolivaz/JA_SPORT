@@ -7,7 +7,6 @@ import './header.css'
 
 function Header(props) {
     useEffect(() => {
-        console.log('rerender')
         window.scrollTo(0, 0)
       });
     const [searchValue, guardarSearchValue] = useState('');
@@ -60,7 +59,7 @@ function Header(props) {
                             }
                         </ul>
                     </li>
-                    <Link to={'/'} >
+                    <Link to={'/wishlist'} >
                             <li className="nav-item">
                                 <span className="nav-link">
                                     Favoritos

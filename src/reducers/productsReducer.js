@@ -30,7 +30,8 @@ const initialState = {
             price: 200,
             discount: 15,
             brand: 'Nike',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
 		{
 			id: 2,
@@ -40,7 +41,8 @@ const initialState = {
             price: 230,
             discount: 10,
             brand: 'Nike',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
 		{
 			id: 3,
@@ -50,7 +52,8 @@ const initialState = {
             price: 400,
             discount: 0,
             brand: 'Nike',
-            shipping: true
+            shipping: true,
+            wishList: false
         },
         {
 			id: 4,
@@ -60,7 +63,8 @@ const initialState = {
             price: 30,
             discount: 50,
             brand: 'Nike',
-            shipping: false
+            shipping: false,
+            wishList: false
 		},
 		{
 			id: 5,
@@ -70,7 +74,8 @@ const initialState = {
             price: 80,
             discount: 0,
             brand: 'Nike',
-            shipping: false
+            shipping: false,
+            wishList: false
 		},
 		{
 			id: 6,
@@ -80,7 +85,8 @@ const initialState = {
             price: 430,
             discount: 20,
             brand: 'Nike',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
         {
 			id: 7,
@@ -90,7 +96,8 @@ const initialState = {
             price: 40,
             discount: 20,
             brand: 'Adidas',
-            shipping: false
+            shipping: false,
+            wishList: false
 		},
 		{
 			id: 8,
@@ -100,7 +107,8 @@ const initialState = {
             price: 80,
             discount: 0,
             brand: 'Adidas',
-            shipping: false
+            shipping: false,
+            wishList: false
 		},
 		{
 			id: 9,
@@ -110,7 +118,8 @@ const initialState = {
             price: 480,
             discount: 40,
             brand: 'Adidas',
-            shipping: true
+            shipping: true,
+            wishList: false
         },
         {
 			id: 10,
@@ -120,7 +129,8 @@ const initialState = {
             price: 70,
             discount: 20,
             brand: 'Adidas',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
 		{
 			id: 11,
@@ -130,7 +140,8 @@ const initialState = {
             price: 80,
             discount: 0,
             brand: 'Adidas',
-            shipping: false
+            shipping: false,
+            wishList: false
 		},
 		{
 			id: 12,
@@ -140,7 +151,8 @@ const initialState = {
             price: 20,
             discount: 40,
             brand: 'Adidas',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
 		{
 			id: 13,
@@ -150,7 +162,8 @@ const initialState = {
             price: 20,
             discount: 0,
             brand: 'Adidas',
-            shipping: false
+            shipping: false,
+            wishList: false
 		},
 		{
 			id: 14,
@@ -160,7 +173,8 @@ const initialState = {
             price: 30,
             discount: 0,
             brand: 'Adidas',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
 		{
 			id: 15,
@@ -170,7 +184,8 @@ const initialState = {
             price: 30,
             discount: 0,
             brand: 'Nike',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
 		{
 			id: 16,
@@ -180,7 +195,8 @@ const initialState = {
             price: 30,
             discount: 0,
             brand: 'Nike',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
 		{
 			id: 17,
@@ -190,7 +206,8 @@ const initialState = {
             price: 20,
             discount: 0,
             brand: 'Nike',
-            shipping: false
+            shipping: false,
+            wishList: false
 		},
 		{
 			id: 18,
@@ -200,7 +217,8 @@ const initialState = {
             price: 30,
             discount: 0,
             brand: 'Nike',
-            shipping: true
+            shipping: true,
+            wishList: false
 		},
 		{
 			id: 19,
@@ -210,7 +228,8 @@ const initialState = {
             price: 30,
             discount: 5,
             brand: 'Adidas',
-            shipping: false
+            shipping: false,
+            wishList: false
 		},
 		{
 			id: 20,
@@ -220,7 +239,8 @@ const initialState = {
             price: 30,
             discount: 5,
             brand: 'Adidas',
-            shipping: true
+            shipping: true,
+            wishList: false
 		}
     ],
     searchProducts: []
@@ -233,7 +253,7 @@ export default function(state = initialState, action) {
                 ...state,
                 searchProducts: state.products.filter(product => product.name.toLowerCase().indexOf(action.payload.toLowerCase()) !== -1)
             }
-        case 'ADD_PRODUCTS': 
+        case 'UPDATE_PRODUCTS': 
             return {
                 ...state,
                 products: [...state.products, action.payload]

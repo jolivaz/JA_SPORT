@@ -6,6 +6,7 @@ import CarouselShorts from './components/carouselShorts/carouselShorts'
 import CarouselShoes from './components/carouselShoes/carouselShoes'
 import BannerSmall from './components/bannerSmall/bannerSmall'
 import Category from './components/category/category'
+import WishList from './components/wishList/wishList'
 import Header from './components/header/header'
 import Banner from './components/banner/banner'
 import Footer from './components/footer/footer'
@@ -41,7 +42,7 @@ function App() {
                          </Fragment>
                        )}/>   
             <Route exact path="/offer" 
-                       render={ props => {
+                       render={ () => {
                          return(
                           <Fragment>
                               <Offer />
@@ -60,6 +61,15 @@ function App() {
                           </Fragment>
                         )
                        }}/>  
+
+            <Route exact path="/wishlist" 
+                       render={ () => {
+                         return(
+                          <Fragment>
+                              <WishList />
+                          </Fragment>
+                        )
+                       }}/> 
 
           <Footer />
         </div>
