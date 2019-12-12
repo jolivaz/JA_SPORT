@@ -38,21 +38,35 @@ function Header(props) {
                     <Link to={'/'} >
                             <li className="nav-item">
                                 <span className="nav-link">
-                                    Home
+                                    Inicio
                                 </span>
                             </li>
-                        </Link>
-                    {
-                        categories.map(name => 
-                        <Link to={`/category/${name}`} key={name}>
+                    </Link>
+                    <li className="nav-item nav-categories">
+                        <span className="nav-link">
+                            Categorias
+                        </span>
+                        <ul>
+                            {
+                                categories.map(name => 
+                                <Link to={`/category/${name}`} key={name}>
+                                    <li className="nav-item">
+                                        <span className="nav-link">
+                                            {name.charAt(0).toUpperCase() + name.slice(1)}
+                                        </span>
+                                    </li>
+                                </Link>
+                                )
+                            }
+                        </ul>
+                    </li>
+                    <Link to={'/'} >
                             <li className="nav-item">
                                 <span className="nav-link">
-                                    {name.charAt(0).toUpperCase() + name.slice(1)}
+                                    Favoritos
                                 </span>
                             </li>
-                        </Link>
-                        )
-                    }
+                    </Link>
                 </ul>
                 <div className="user">
                     <i className="fas fa-user"></i>

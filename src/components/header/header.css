@@ -42,3 +42,25 @@
 ul{
     display: flex;
 }
+
+.nav-categories ul{
+    display: none;
+    padding: 10px 5px;
+    position: absolute;
+    background: #F1F7D7;
+}
+.nav-categories ul a {
+    height: 30px;
+}
+.nav-categories ul span {
+    height: 30px;
+    margin-top: -15px;
+}
+
+.nav-categories:hover ul{
+    display: block;
+}
+nav ul a{
+    margin: 0 5px;
+}
+
