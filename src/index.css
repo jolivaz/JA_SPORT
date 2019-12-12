@@ -8,60 +8,56 @@ nav .brand-logo {
   text-align: center;
   position: relative;
 }
-.input-field label {
-  color: white;
-}
 
-.input-field input[type=text]:focus + label {
-  color: white;
-} 
-
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid white;
-  box-shadow: 0 1px 0 0 #000;
-}
-
-input[type=text]:not(.browser-default) {
-  border-bottom: 1px solid white;
-   color: black;
-}
-input[type=text]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid white;
-  -webkit-box-shadow: 0 1px 0 0 white;
-  box-shadow: 0 1px 0 0 white;
-}
-input[type=text]:not(.browser-default):focus:not([readonly]) + label {
-   color: black;
+.nav-link { 
+  padding: 0 10px;
 }
 
 .contenedor-form {
   padding: 3rem 0 1px 0;
   background-color: #03a9f4;
 }
-.buscador i {
-  width: 100%;
+
+.header-app{
+  display: flex;
+  padding: 0 30px;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
 }
-.error {
-  padding: 1rem!important;
-  color:white;
-  margin-top: 3rem;
-  text-align: center;
+
+.header-app img{
+  width: 160px;
 }
-.card-panel h2 {
-  font-size: 1.6rem;
-  text-align: center;
+
+.header-app .lista{
+  display: flex;
+  align-items: center;
 }
-.card-panel p {
-  text-align: center;
-  font-size: 1.4rem;
+
+nav ul li.active{
+  display: flex;
 }
-.temperatura {
-  font-size: 4rem!important
+
+nav ul li.active a{
+  color: #F40909;
 }
-.temperatura span {
-  font-size: 2rem!important;
-  vertical-align: super;
+
+nav ul li a{
+  color: #000000;
 }
-.btn-block {
-  display: block!important;
+
+nav .user{
+  height: 45px;
+  padding: 10px;
+  display: flex;
+  margin-left: 10px;
+  color: #F40909;
+  align-items: center;
+  border-radius: 100%;
+  border: 3px solid #F40909;
+}
+
+nav .user i{
+  height: 25px
 }

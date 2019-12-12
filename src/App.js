@@ -1,88 +1,70 @@
-import React, { useState, useEffect } from 'react';
-
-import Header from './components/header/header';
-import Formulario from './components/formulario/formulario';
-import Error from './components/error/error';
-import Clima from './components/clima/clima';
+import React, { Fragment } from 'react'
+import CarouselShippingFree from './components/carouselShippingFree/carouselShippingFree'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import CarouselShirts from './components/carouselShirts/carouselShirts'
+import CarouselShorts from './components/carouselShorts/carouselShorts'
+import CarouselShoes from './components/carouselShoes/carouselShoes'
+import BannerSmall from './components/bannerSmall/bannerSmall'
+import Category from './components/category/category'
+import Header from './components/header/header'
+import Banner from './components/banner/banner'
+import Footer from './components/footer/footer'
+import Search from './components/search/search'
+import Offer from './components/offer/offer'
+import { Provider } from 'react-redux'
+import store from './store';
+import './App.css'
 
 function App() {
 
-  // State princial
-  // ciudad = state, guardarCiudad = this.setState()
-  const [ ciudad, guardarCiudad ] = useState('');
-  const [ pais, guardarPais] = useState('');
-  const [ error, guardarError ] = useState(false);
-  const [ resultado, guardarResultado] = useState({})
-
-  useEffect(() => {
-
-    // prevenir ejecución
-    if(ciudad === '') return;
-
-    const consultarAPI = async () => {
-      const appId = 'c06b336ea06d0bad4a3ad7182932c384';
-
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${appId}`; 
-      // consultar la URL
-      const respuesta = await fetch(url);
-      const resultado = await respuesta.json();
-      guardarResultado(resultado);
-    }
-
-    consultarAPI();
-  }, [ ciudad, pais ]);
-
-
-  const datosConsulta = datos => {
-      // Validar que ambos campos estén
-      if(datos.ciudad === '' || datos.pais === '') {
-        guardarError(true);
-        return;
-      }
-
-      // Ciudad y pais existen, agregarlos al state
-      guardarCiudad(datos.ciudad);
-      guardarPais(datos.pais);
-      guardarError(false);
-  }
-  
-  // Cargar un componente Condicionalmente
-  let componente;
-  if(error) {
-    // Hay un error, mostrarlo
-    componente = <Error mensaje='Ambos campos son obligatorios' />
-  } else if (resultado.cod === "404") {
-    componente = <Error mensaje="La ciudad no existe en nuestro registro" />
-  } else {
-    // Mostrar el Clima
-    componente = <Clima 
-                  resultado={resultado}
-                />;
-  }
-
-
   return (
-    <div className="App">
-        <Header 
-          titulo='Clima React App'
-        />
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Header />
+          <Route exact path="/" 
+                       render={() => (
+                         <Fragment>
+                            <Banner />
+                            <CarouselShippingFree />
+                            <CarouselShirts />
+                            <BannerSmall />
+                            <CarouselShorts />
+                            <CarouselShoes />
+                         </Fragment>
+                       )}/>
+            <Route exact path="/search" 
+                       render={() => (
+                         <Fragment>
+                            <Search />
+                            <CarouselShippingFree />
+                         </Fragment>
+                       )}/>   
+            <Route exact path="/offer" 
+                       render={ props => {
+                         return(
+                          <Fragment>
+                              <Offer />
+                              <CarouselShoes />
+                          </Fragment>
+                        )
+                       }}/>  
 
-        <div className="contenedor-form">
-          <div className="container">
-            <div className="row">
-              <div className="col s12 m6">
-                  <Formulario 
-                    datosConsulta={datosConsulta}
-                  />
-              </div>
+            <Route exact path="/category/:name"               
+                        render={ props => {
+                         const categoryName = props.match.params.name
+                         return(
+                          <Fragment>
+                              <Category categoryName={categoryName} />
+                              <CarouselShoes />
+                          </Fragment>
+                        )
+                       }}/>  
 
-              <div className="col s12 m6">
-                  {componente}
-              </div>
-            </div>
-          </div>
+          <Footer />
         </div>
-    </div>
+      </Router>
+    </Provider>
   );
 }
 

@@ -1,0 +1,44 @@
+.header-app{
+    position: fixed;
+    z-index: 9;
+}
+.header-app-search{
+    width: 40%;
+    display: flex;
+    position: relative;
+}
+
+.header-app-search input {
+    height: 33px;
+    color: grey;
+    padding-right: 0;
+    padding: 0px 10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+
+.header-app-search i {
+    top: 0px;
+    right: 0px;
+    width: 30px;
+    height: 35px;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 18px;
+    position: absolute;
+    align-items: center;
+    background: #F40909;
+    justify-content: center;
+    border: 1px solid #F40909;
+    border-radius: 0 11px 10px 0;
+}
+
+.nav-link{
+    padding: 0;
+    color: black;
+}
+
+ul{
+    display: flex;
+}
