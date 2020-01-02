@@ -61,3 +61,37 @@ nav .user{
 nav .user i{
   height: 25px
 }
+
+.wishlist{
+  margin: 10px 0 0 10px;
+}
+.wishlist i{
+  font-size: 18px;
+  color: #EE1E09;
+}
+a{
+  width: 100%;
+  color: #000000;
+  text-decoration: none;;
+}
+a:hover{
+  color: #000000;
+  text-decoration: none;;
+}
+.section-filter-search{
+  display: flex;
+  background: #eee;
+  padding: 95px 20px 30px;
+}
+.MuiSvgIcon-root{
+  width: 15px!important;
+  height: 15px!important;
+}
+
+.MuiFormControlLabel-root{
+  margin: 0 5px !important;
+}
+
+.MuiCheckbox-colorSecondary.Mui-checked{
+  color: #EE1E09!important;
+}

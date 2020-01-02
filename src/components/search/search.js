@@ -1,64 +1,85 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import './search.css'
+import React from "react";
+import { updateProductsAction } from "../../actions/productsActions";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import "./search.css";
 
 function Search() {
+  let searchProducts = useSelector(state => state.products.searchProducts);
+  const allProducts = useSelector(state => state.products);
 
-    let searchProducts =  useSelector((state) => state.products.searchProducts);
-  
-  return(
-      <div className="section-search">
-          {
+  // Dispatch wishlist to state
+  const dispatch = useDispatch();
+  const updateListProducts = products =>
+    dispatch(updateProductsAction(products));
 
-            searchProducts.length > 0  ?
-                searchProducts.map(product =>
+  const changeWishList = (e, id, active) => {
+    e.preventDefault();
+    let newList = allProducts.products;
+    let elementWishList = []
 
-                    <div key={product.id} className="search-item">
-                        <div className="search-item-img">
-                            <img src={product.img} alt={product.name}/>
-                        </div>
-                        <div className="search-item-prices">
-                        <div className="search-item-prices-mount">
-                                {
-                                    product.discount > 0 ?
-                                    <span className="mount-discount">
-                                        ${product.price}
-                                    </span>
-                                    : null
-                                }
-                                {product.discountc}
-                                <span className="mount-price">${product.price -(product.price * product.discount)/100}</span>
-                            </div>
-                            <div className="search-item-prices-descount">
-                                {
-                                    product.discount > 0 ?
-                                    <span>{product.discount}%</span>
-                                    : null
-                                }
-                            </div>
+    elementWishList = newList.find(product => product.id === id );
+    active ? (elementWishList.wishList = false) : (elementWishList.wishList = true)
+    updateListProducts(elementWishList);
+  };
 
-                        </div>
-                        <div className="search-item-name">
-                            <div className="search-item-name-brand">
-                                <h5>{product.name}</h5>
-                                <span>{product.brand}</span>
-                            </div>
-                            {
-                                product.shipping ?
-                                <i className="fas fa-shipping-fast"></i>
-                                : null
-                            }
-                        </div>
-
-                    </div>
-                )
-                : 
-                <div>
-                    <h5>No se han encontrado resultados</h5>
+  return (
+    <div className="section-search">
+      {searchProducts.length > 0 ? (
+        searchProducts.map(product => (
+          <Link to={`/product/${product.id}`} key={product.id} className="search-product">
+            <div key={product.id} className="search-item">
+              <div className="wishlist">
+                {product.wishList ? (
+                  <i
+                    className="fas fa-heart"
+                    onClick={e => changeWishList(e, product.id, true)}
+                  ></i>
+                ) : (
+                  <i
+                    className="far fa-heart"
+                    onClick={e => changeWishList(e, product.id, false)}
+                  ></i>
+                )}
+              </div>
+              <div className="search-item-img">
+                <img src={product.img} alt={product.name} />
+              </div>
+              <div className="search-item-prices">
+                <div className="search-item-prices-mount">
+                  {product.discount > 0 ? (
+                    <span className="mount-discount">${product.price}</span>
+                  ) : null}
+                  {product.discountc}
+                  <span className="mount-price">
+                    ${product.price - (product.price * product.discount) / 100}
+                  </span>
                 </div>
-            }
-      </div>
-  )
+                <div className="search-item-prices-descount">
+                  {product.discount > 0 ? (
+                    <span>{product.discount}%</span>
+                  ) : null}
+                </div>
+              </div>
+              <div className="search-item-name">
+                <div className="search-item-name-brand">
+                  <h5>{product.name}</h5>
+                  <span>{product.brand}</span>
+                </div>
+                {product.shipping ? (
+                  <i className="fas fa-shipping-fast"></i>
+                ) : null}
+              </div>
+            </div>
+          </Link>
+        ))
+      ) : (
+        <div>
+          <h5>No se han encontrado resultados</h5>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default Search;

@@ -185,3 +185,7 @@ ul.social-footer2 li a {
 .list-categories {
   display: block;
 }
+.redes i {
+  margin: 0 5px;
+  font-size: 21px;
+}

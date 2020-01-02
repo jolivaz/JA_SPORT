@@ -18,3 +18,10 @@ export const deleteProductsAction = id => {
         payload: id
     }
 }
+
+export const filterBrandsProductsAction = filter => {
+    return {
+        type: 'FILTER_BRANDS_PRODUCTS',
+        payload: filter
+    }
+}

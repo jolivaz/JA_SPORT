@@ -1,14 +1,18 @@
 .section-search{
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    padding-top: 90px;
+    margin: 0 15px;
+    padding: 30px 40px;
+    background: #ffffff;
+}
+.search-product{
+    width: 23%;
+    margin: 1%;
 }
 
 .search-item{
-    width: 18%;
-    margin: 1%;
+    width: 100%;
     min-height: 380px;
     box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.75);
 }

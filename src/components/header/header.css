@@ -2,6 +2,14 @@
     position: fixed;
     z-index: 9;
 }
+.header-app .logo{
+    width: 160px;
+}
+
+.header-app .logo-search{
+    width: 27px;
+}
+
 .header-app-search{
     width: 40%;
     display: flex;

@@ -17,6 +17,13 @@ function Footer() {
                   JA SPORT<span></span>
                 </h5>
                 <p>Venta de articulos deportivos</p>
+                <div className="redes">
+                  <i className="fab fa-instagram"></i>
+                  <i className="fab fa-facebook-f"></i>
+                  <i className="fab fa-facebook-messenger"></i>
+                  <i className="fab fa-mailchimp"></i>
+                  <i className="far fa-envelope"></i>
+                </div>
               </div>
             </div>
 
@@ -54,9 +61,6 @@ function Footer() {
                   Se parte de nosotros<span></span>
                 </h5>
                 <p>Ten descuentos los mejores descuentos.</p>
-                <a className="btn" href="#." target="_blank">
-                  Registrarme
-                </a>
               </div>
             </div>
 
@@ -78,7 +82,7 @@ function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center">
-              <p>Copyright Company Name © 2016. All rights reserved.</p>
+              <p>Copyright https://github.com/jolivaz © 2019. All rights reserved.</p>
             </div>
           </div>
         </div>

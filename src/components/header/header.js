@@ -13,14 +13,14 @@ function Header(props) {
     const categories = ['zapatos','franelas','shorts','balones']
     //dispatch search
     const dispatch = useDispatch();
-    const agregarNuevaCita = (value) => dispatch( searchProductsAction(value) );
+    const agregarBusqueda = (value) => dispatch( searchProductsAction(value) );
     const handleSearch = () => {
-        agregarNuevaCita(searchValue)
+        agregarBusqueda(searchValue)
         props.history.push('/search')
     }
     return(
         <nav className="header-app">
-            <Link to="/" >
+            <Link to="/"className="logo" >
                 <img src={Logo} alt="logo"/>
             </Link> 
             <div className="header-app-search">
@@ -28,7 +28,7 @@ function Header(props) {
                     onKeyDown={ (e) => e.keyCode === 13 ? handleSearch() : null }
                     placeholder="Escriba el producto que busca" 
                     onChange={(e) =>guardarSearchValue(e.target.value)} />
-                <Link to='/search' >
+                <Link to='/search' className="logo-search" >
                     <i className="fas fa-search" onClick={() => handleSearch()}></i>
                 </Link>
             </div>
