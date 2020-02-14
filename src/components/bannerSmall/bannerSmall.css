@@ -30,3 +30,8 @@
     color: #fff;
     background-color: #F40909;
 }
+@media(max-width: 768px){
+    .carousel-inner .carousel-item img{
+        height: 450px;
+    }
+}

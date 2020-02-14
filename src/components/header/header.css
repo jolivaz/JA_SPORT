@@ -76,4 +76,66 @@ nav ul a{
     margin: 0;
     height: 30px;
 }
+.fa-bars,
+.fa-times-circle{
+    display: none;
+    color: #F40909;
+    height: 21px;
+}
+.menu-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+@media (max-width: 768px){
+    nav{
+        height: 68px;
+    }
+    .fa-bars{
+        display: block;
+    }
+    .fa-times-circle{
+        top: 10px;
+        z-index: 2;
+        right: 10px;
+        color: #F40909;
+        position: absolute;
+    }
+    .fa-times-circle.active{
+        display: block;
+    }
+    .menu-header{
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: none;
+        position: absolute;
+        background: #fff;
+        padding: 20px 30px;
+    }
+    .header-app-search{
+        width: 90%;
+    }
+    .lista{
+        padding-left: 20px;
+    }
+    .lista .items-top a,
+    .lista .items-top li{
+        width: auto;
+        margin: 0 5px;
+        margin-left: 0;
+        line-height: 30px;
+        padding: 0!important;
+    }
+    .lista .items-top span{
+        display: initial;
+    }
+    .menu-header.open{
+        display: block; 
+    }
+    .user{
+        display: none!important;
+    }
+}
 

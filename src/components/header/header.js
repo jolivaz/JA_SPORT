@@ -10,7 +10,10 @@ function Header(props) {
         window.scrollTo(0, 0)
       });
     const [searchValue, guardarSearchValue] = useState('');
-    const categories = ['zapatos','franelas','shorts','balones']
+    const [showMenu, guardarShowMenu] = useState(false);
+    const [classNameMenuMobile, guardarclassNameMenuMobile] = useState('menu-header')
+    const [classIconCloseMobile, guardarclassIconCloseMobile] = useState('fas fa-times-circle')
+    const categories = ['Zapatos','Franelas','Shorts','Balones']
     //dispatch search
     const dispatch = useDispatch();
     const agregarBusqueda = (value) => dispatch( searchProductsAction(value) );
@@ -18,57 +21,72 @@ function Header(props) {
         agregarBusqueda(searchValue)
         props.history.push('/search')
     }
+    const handleShowMenu = (e) => {
+        e.preventDefault()
+        guardarShowMenu(!showMenu)
+        if (showMenu){
+            guardarclassNameMenuMobile('menu-header open')
+            guardarclassIconCloseMobile('fas fa-times-circle active')
+        } else {
+            guardarclassNameMenuMobile('menu-header')
+            guardarclassIconCloseMobile('fas fa-times-circle')
+        }
+    }
     return(
         <nav className="header-app">
             <Link to="/"className="logo" >
                 <img src={Logo} alt="logo"/>
             </Link> 
-            <div className="header-app-search">
-                <input 
-                    onKeyDown={ (e) => e.keyCode === 13 ? handleSearch() : null }
-                    placeholder="Escriba el producto que busca" 
-                    onChange={(e) =>guardarSearchValue(e.target.value)} />
-                <Link to='/search' className="logo-search" >
-                    <i className="fas fa-search" onClick={() => handleSearch()}></i>
-                </Link>
-            </div>
-            <div className="lista" id="navbarText">
-                <ul>
-                    <Link to={'/'} >
-                            <li className="nav-item">
-                                <span className="nav-link">
-                                    Inicio
-                                </span>
-                            </li>
+            <i className="fas fa-bars" onClick={e => handleShowMenu(e)}></i>
+            <i className={classIconCloseMobile} onClick={e => handleShowMenu(e)}></i>
+            <div className={classNameMenuMobile}>
+                <div className="header-app-search">
+                    <input 
+                        onKeyDown={ (e) => e.keyCode === 13 ? handleSearch() : null }
+                        placeholder="Escriba el producto que busca" 
+                        onChange={(e) =>guardarSearchValue(e.target.value)} />
+                    <Link to='/search' className="logo-search" >
+                        <i className="fas fa-search" onClick={() => handleSearch()}></i>
                     </Link>
-                    <li className="nav-item nav-categories">
-                        <span className="nav-link">
-                            Categorias
-                        </span>
-                        <ul>
-                            {
-                                categories.map(name => 
-                                <Link to={`/category/${name}`} key={name}>
-                                    <li className="nav-item">
-                                        <span className="nav-link">
-                                            {name.charAt(0).toUpperCase() + name.slice(1)}
-                                        </span>
-                                    </li>
-                                </Link>
-                                )
-                            }
-                        </ul>
-                    </li>
-                    <Link to={'/wishlist'} >
-                            <li className="nav-item">
-                                <span className="nav-link">
-                                    Favoritos
-                                </span>
-                            </li>
-                    </Link>
-                </ul>
-                <div className="user">
-                    <i className="fas fa-user"></i>
+                </div>
+                <div className="lista" id="navbarText">
+                    <ul className="items-top">
+                        <Link to={'/'} >
+                                <li className="nav-item">
+                                    <span className="nav-link">
+                                        Inicio
+                                    </span>
+                                </li>
+                        </Link>
+                        <li className="nav-item nav-categories">
+                            <span className="nav-link">
+                                Categorias
+                            </span>
+                            <ul>
+                                {
+                                    categories.map(name => 
+                                    <Link to={`/category/${name}`} key={name}>
+                                        <li className="nav-item">
+                                            <span className="nav-link">
+                                                {name.charAt(0).toUpperCase() + name.slice(1)}
+                                            </span>
+                                        </li>
+                                    </Link>
+                                    )
+                                }
+                            </ul>
+                        </li>
+                        <Link to={'/wishlist'} >
+                                <li className="nav-item">
+                                    <span className="nav-link">
+                                        Favoritos
+                                    </span>
+                                </li>
+                        </Link>
+                    </ul>
+                    <div className="user">
+                        <i className="fas fa-user"></i>
+                    </div>
                 </div>
             </div>
       </nav>

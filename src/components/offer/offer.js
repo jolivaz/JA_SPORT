@@ -30,7 +30,7 @@ function Offer() {
     <div className="section-offer">
       {offerProducts.length > 0 ? (
         offerProducts.map(product => (
-          <Link to={`/product/${product.id}`} key={product.id}>
+          <Link to={`/product/${product.id}`} key={product.id} className="offer-product">
             <div key={product.id} className="offer-item">
               <div className="wishlist">
                 {product.wishList ? (

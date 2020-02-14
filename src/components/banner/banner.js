@@ -4,9 +4,10 @@ import { useSelector } from 'react-redux';
 import Carousel from 'react-bootstrap/Carousel'
 
 function Banner() {
-
 	const elementBanner =  useSelector((state) => state.banner);
-  return(
+	const elementBanner2 =  useSelector((state) => state.products.recommended);
+	console.log('elementBanner2', elementBanner2)
+  	return(
 		<Carousel>
 			{
 				elementBanner.banner.map(element => 

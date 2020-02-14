@@ -1,7 +1,8 @@
-import React from "react";
+import React from "react"
 import { updateProductsAction } from '../../actions/productsActions'
-import { useDispatch, useSelector } from 'react-redux';
-import "./productDetail.css";
+import { useDispatch, useSelector } from 'react-redux'
+import Breadcrumb from '../breadcrumb/breadcrumb'
+import "./productDetail.css"
 
 function ProductDetail({idProduct}) {
   let allProducts = useSelector(state => state.products);
@@ -25,6 +26,7 @@ function ProductDetail({idProduct}) {
   }
   return (
     <div className="section-product">
+      <Breadcrumb name={productActive[0].name} category={productActive[0].category}/>
           <div key={productActive[0].id} className="product-item">
             <div className="product-item-img">
               <img src={productActive[0].img} alt={productActive[0].name} />
@@ -49,23 +51,29 @@ function ProductDetail({idProduct}) {
               <div className="product-item-name">
                 <div className="product-item-name-brand">
                   <h5>{productActive[0].name}</h5>
-                  <p>{productActive[0].description}</p>
                   <span>{productActive[0].brand}</span>
+                  <div>
+                    <label className="title-description">Descripcion:</label>
+                    <p className="text-description">{productActive[0].description}</p>
+                  </div>
                 </div>
               </div>
               <div className="product-item-prices">
                 <div className="product-item-prices-mount">
                   {productActive[0].discount > 0 ? (
-                    <span className="mount-discount">${productActive[0].price}</span>
+                    <span className="product-detail-mount-discount">${productActive[0].price}</span>
                   ) : null}
                   {productActive[0].discountc}
-                  <span className="mount-price">
+                  <span className="product-detail-mount-price">
                     ${productActive[0].price - (productActive[0].price * productActive[0].discount) / 100}
                   </span>
                 </div>
                 <div className="product-item-prices-descount">
                   {productActive[0].discount > 0 ? <span>{productActive[0].discount}%</span> : null}
                 </div>
+              </div>
+              <div className="product-item-buy">
+                    <button>Comprar</button>
               </div>
             </div>
           </div>

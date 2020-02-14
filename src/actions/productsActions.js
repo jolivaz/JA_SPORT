@@ -25,3 +25,10 @@ export const filterBrandsProductsAction = filter => {
         payload: filter
     }
 }
+
+export const filterCategoryProductsAction = filter => {
+    return {
+        type: 'FILTER_CATEGORY_PRODUCTS',
+        payload: filter
+    }
+}

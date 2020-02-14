@@ -8,16 +8,16 @@ function Filter() {
 
   const [category, setCategory] = useState([
     {
-      name: 'zapatos'
+      name: 'Zapatos'
     },
     {
-      name: 'franelas'
+      name: 'Franelas'
     },
     {
-      name: 'shorts'
+      name: 'Shorts'
     },
     {
-      name: 'balones'
+      name: 'Balones'
     }
   ]);
   const [brand, setBrand] = useState([

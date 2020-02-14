@@ -18,7 +18,8 @@ import Product17 from '../images/product17.jpg'
 import Product18 from '../images/product18.jpg'
 import Product19 from '../images/product19.jpg'
 import Product20 from '../images/product20.jpg'
-
+import fondoNike from '../images/fondonike.jpg'
+import fondoAdidas from '../images/fondoadidas.jpg'
 
 const initialState = {
     products: [
@@ -27,7 +28,7 @@ const initialState = {
 			img: Product1,
 			name: 'Dom Sock 10',
             category: 'Zapatos',
-            description: 'Descripcion de prueba del producto',
+            description: 'El calzado deportivo es un tipo de calzado utilizado para practicar deporte. Generalmente posee un cuerpo fabricado en piel, lona y/o materiales sintéticos y una suela de goma que favorece una mayor adherencia, así como más flexibilidad.',
             price: 200,
             discount: 15,
             brand: 'Nike',
@@ -39,7 +40,7 @@ const initialState = {
 			img: Product2,
 			name: 'Bride Rex',
             category: 'Zapatos',
-            description: 'Descripcion de prueba del producto',
+            description: 'El calzado deportivo es un tipo de calzado utilizado para practicar deporte. Generalmente posee un cuerpo fabricado en piel, lona y/o materiales sintéticos y una suela de goma que favorece una mayor adherencia, así como más flexibilidad.',
             price: 230,
             discount: 10,
             brand: 'Nike',
@@ -51,7 +52,7 @@ const initialState = {
 			img: Product3,
 			name: 'Dadd k25',
             category: 'Zapatos',
-            description: 'Descripcion de prueba del producto',
+            description: 'El calzado deportivo es un tipo de calzado utilizado para practicar deporte. Generalmente posee un cuerpo fabricado en piel, lona y/o materiales sintéticos y una suela de goma que favorece una mayor adherencia, así como más flexibilidad.',
             price: 400,
             discount: 0,
             brand: 'Nike',
@@ -63,7 +64,7 @@ const initialState = {
 			img: Product4,
 			name: 'Franela J20',
             category: 'Franelas',
-            description: 'Descripcion de prueba del producto',
+            description: 'Una camiseta, franela, casaca, playera, polera, polo o remera es una prenda de vestir por lo general de mangas cortas, cuello redondo, sin bolsillos y sin botones a lo largo de su parte frontal (este último detalle es el que las distingue de las camisas, aunque pueden tener dos o tres en la parte superior delantera para ampliar la abertura del cuello).',
             price: 30,
             discount: 50,
             brand: 'Nike',
@@ -73,9 +74,9 @@ const initialState = {
 		{
 			id: 5,
 			img: Product5,
-			name: 'Nike Bew',
+			name: 'Balon Nike Bew',
             category: 'Balones',
-            description: 'Descripcion de prueba del producto',
+            description: 'El balón de fútbol utilizado en competiciones oficiales es regulado en sus medidas por la FIFA. Tiene forma de icosaedro truncado en un 99.9%, una circunferencia entre 68 y 70 centímetros y un peso entre 410 y 450 gramos.',
             price: 80,
             discount: 0,
             brand: 'Nike',
@@ -87,7 +88,7 @@ const initialState = {
 			img: Product6,
 			name: 'Tempo k2',
             category: 'Zapatos',
-            description: 'Descripcion de prueba del producto',
+            description: 'El calzado deportivo es un tipo de calzado utilizado para practicar deporte. Generalmente posee un cuerpo fabricado en piel, lona y/o materiales sintéticos y una suela de goma que favorece una mayor adherencia, así como más flexibilidad.',
             price: 430,
             discount: 20,
             brand: 'Nike',
@@ -99,7 +100,7 @@ const initialState = {
 			img: Product7,
 			name: 'Franela Adidas',
             category: 'Franelas',
-            description: 'Descripcion de prueba del producto',
+            description: 'Una camiseta, franela, casaca, playera, polera, polo o remera es una prenda de vestir por lo general de mangas cortas, cuello redondo, sin bolsillos y sin botones a lo largo de su parte frontal (este último detalle es el que las distingue de las camisas, aunque pueden tener dos o tres en la parte superior delantera para ampliar la abertura del cuello).',
             price: 40,
             discount: 20,
             brand: 'Adidas',
@@ -111,7 +112,7 @@ const initialState = {
 			img: Product8,
 			name: 'Adidas Branco',
             category: 'Zapatos',
-            description: 'Descripcion de prueba del producto',
+            description: 'El calzado deportivo es un tipo de calzado utilizado para practicar deporte. Generalmente posee un cuerpo fabricado en piel, lona y/o materiales sintéticos y una suela de goma que favorece una mayor adherencia, así como más flexibilidad.',
             price: 80,
             discount: 0,
             brand: 'Adidas',
@@ -123,7 +124,7 @@ const initialState = {
 			img: Product9,
 			name: 'Yezzi Twet',
             category: 'Zapatos',
-            description: 'Descripcion de prueba del producto',
+            description: 'El calzado deportivo es un tipo de calzado utilizado para practicar deporte. Generalmente posee un cuerpo fabricado en piel, lona y/o materiales sintéticos y una suela de goma que favorece una mayor adherencia, así como más flexibilidad.',
             price: 480,
             discount: 40,
             brand: 'Adidas',
@@ -135,7 +136,7 @@ const initialState = {
 			img: Product10,
 			name: 'Franela Real Madrid CF Local',
             category: 'Franelas',
-            description: 'Descripcion de prueba del producto',
+            description: 'Una camiseta, franela, casaca, playera, polera, polo o remera es una prenda de vestir por lo general de mangas cortas, cuello redondo, sin bolsillos y sin botones a lo largo de su parte frontal (este último detalle es el que las distingue de las camisas, aunque pueden tener dos o tres en la parte superior delantera para ampliar la abertura del cuello).',
             price: 70,
             discount: 20,
             brand: 'Adidas',
@@ -147,7 +148,7 @@ const initialState = {
 			img: Product11,
 			name: 'Franela Real Madrid CF Visitante',
             category: 'Franelas',
-            description: 'Descripcion de prueba del producto',
+            description: 'Una camiseta, franela, casaca, playera, polera, polo o remera es una prenda de vestir por lo general de mangas cortas, cuello redondo, sin bolsillos y sin botones a lo largo de su parte frontal (este último detalle es el que las distingue de las camisas, aunque pueden tener dos o tres en la parte superior delantera para ampliar la abertura del cuello).',
             price: 80,
             discount: 0,
             brand: 'Adidas',
@@ -159,7 +160,7 @@ const initialState = {
 			img: Product12,
 			name: 'Franela Kok',
             category: 'Franelas',
-            description: 'Descripcion de prueba del producto',
+            description: 'Una camiseta, franela, casaca, playera, polera, polo o remera es una prenda de vestir por lo general de mangas cortas, cuello redondo, sin bolsillos y sin botones a lo largo de su parte frontal (este último detalle es el que las distingue de las camisas, aunque pueden tener dos o tres en la parte superior delantera para ampliar la abertura del cuello).',
             price: 20,
             discount: 40,
             brand: 'Adidas',
@@ -171,7 +172,7 @@ const initialState = {
 			img: Product13,
 			name: 'Franela Adidas Rot',
             category: 'Franelas',
-            description: 'Descripcion de prueba del producto',
+            description: 'Una camiseta, franela, casaca, playera, polera, polo o remera es una prenda de vestir por lo general de mangas cortas, cuello redondo, sin bolsillos y sin botones a lo largo de su parte frontal (este último detalle es el que las distingue de las camisas, aunque pueden tener dos o tres en la parte superior delantera para ampliar la abertura del cuello).',
             price: 20,
             discount: 0,
             brand: 'Adidas',
@@ -183,7 +184,7 @@ const initialState = {
 			img: Product14,
 			name: 'Franela Yezzi Rosa',
             category: 'Franelas',
-            description: 'Descripcion de prueba del producto',
+            description: 'Una camiseta, franela, casaca, playera, polera, polo o remera es una prenda de vestir por lo general de mangas cortas, cuello redondo, sin bolsillos y sin botones a lo largo de su parte frontal (este último detalle es el que las distingue de las camisas, aunque pueden tener dos o tres en la parte superior delantera para ampliar la abertura del cuello).',
             price: 30,
             discount: 0,
             brand: 'Adidas',
@@ -195,7 +196,7 @@ const initialState = {
 			img: Product15,
 			name: 'Short B10',
             category: 'Shorts',
-            description: 'Descripcion de prueba del producto',
+            description: 'Versatil modelo de bolsillos profundos, pretina elasticada y confeccionado en tela comoda y fresca que se mueve contigo mientras practicas y juegas.',
             price: 30,
             discount: 0,
             brand: 'Nike',
@@ -207,7 +208,7 @@ const initialState = {
 			img: Product16,
 			name: 'Short Rex',
             category: 'Shorts',
-            description: 'Descripcion de prueba del producto',
+            description: 'Versatil modelo de bolsillos profundos, pretina elasticada y confeccionado en tela comoda y fresca que se mueve contigo mientras practicas y juegas.',
             price: 30,
             discount: 0,
             brand: 'Nike',
@@ -219,7 +220,7 @@ const initialState = {
 			img: Product17,
 			name: 'Short Yezzi',
             category: 'Shorts',
-            description: 'Descripcion de prueba del producto',
+            description: 'Versatil modelo de bolsillos profundos, pretina elasticada y confeccionado en tela comoda y fresca que se mueve contigo mientras practicas y juegas.',
             price: 20,
             discount: 0,
             brand: 'Nike',
@@ -231,7 +232,7 @@ const initialState = {
 			img: Product18,
 			name: 'Short Yezzi',
             category: 'Shorts',
-            description: 'Descripcion de prueba del producto',
+            description: 'Versatil modelo de bolsillos profundos, pretina elasticada y confeccionado en tela comoda y fresca que se mueve contigo mientras practicas y juegas.',
             price: 30,
             discount: 0,
             brand: 'Nike',
@@ -243,7 +244,7 @@ const initialState = {
 			img: Product19,
 			name: 'Short Yazz',
             category: 'Shorts',
-            description: 'Descripcion de prueba del producto',
+            description: 'Versatil modelo de bolsillos profundos, pretina elasticada y confeccionado en tela comoda y fresca que se mueve contigo mientras practicas y juegas.',
             price: 30,
             discount: 5,
             brand: 'Adidas',
@@ -255,7 +256,7 @@ const initialState = {
 			img: Product20,
 			name: 'Short Reme',
             category: 'Shorts',
-            description: 'Descripcion de prueba del producto',
+            description: 'Versatil modelo de bolsillos profundos, pretina elasticada y confeccionado en tela comoda y fresca que se mueve contigo mientras practicas y juegas.',
             price: 30,
             discount: 5,
             brand: 'Adidas',
@@ -263,21 +264,81 @@ const initialState = {
             wishList: false
 		}
     ],
-    searchProducts: []
+    searchProducts: [],
+    labelSearch: '',
+    categoryListFilter: [],
+    brandListFilter: [],
+    recommended:{
+        nike: [
+            {
+                img: fondoNike
+            },
+            {
+                id: 1,
+                img: Product1
+            },
+            {
+                id: 2,
+                img: Product2
+            },
+            {
+                id: 5,
+                img: Product5
+            }
+        ],
+        adidas: [
+            {
+                img: fondoAdidas
+            },
+            {
+                id: 7,
+                img: Product7
+            },
+            {
+                id: 8,
+                img: Product8
+            },
+            {
+                id: 9,
+                img: Product9
+            }
+        ]
+    } 
 }
+ 
 
 export default function(state = initialState, action) {
     switch(action.type) {
         case 'SEARCH_PRODUCTS': 
             return {
                 ...state,
-                searchProducts: state.products.filter(product => product.name.toLowerCase().indexOf(action.payload.toLowerCase()) !== -1)
+                labelSearch: action.payload.toLowerCase(),
+                searchProducts: state.products.filter(
+                    product => product.name.toLowerCase().indexOf(action.payload.toLowerCase()) !== -1 && 
+                    product.brand.indexOf(state.brandListFilter) !== -1 &&
+                    product.category.indexOf(state.categoryListFilter) !== -1
+                )
             }
         case 'FILTER_BRANDS_PRODUCTS': 
             return {
                 ...state,
-                searchProducts: state.searchProducts.filter(product => action.payload.map(filterElement =>((product.brand === filterElement.name) && (filterElement.active ))))   
-            }    
+                brandListFilter: action.payload,
+                searchProducts: state.products.filter(
+                    product => product.brand.indexOf(action.payload) !== -1 && 
+                    product.category.indexOf(state.categoryListFilter) !== -1 &&
+                    product.name.toLowerCase().indexOf(state.labelSearch.toLowerCase()) !== -1
+                )   
+            }
+        case 'FILTER_CATEGORY_PRODUCTS': 
+            return {
+                ...state,
+                categoryListFilter: action.payload,
+                searchProducts: state.products.filter(
+                    product => product.category.indexOf(action.payload) !== -1 && 
+                    product.brand.indexOf(state.brandListFilter) !== -1 &&
+                    product.name.toLowerCase().indexOf(state.labelSearch.toLowerCase()) !== -1
+                )   
+            }          
         case 'UPDATE_PRODUCTS': 
             return {
                 ...state,
@@ -286,7 +347,7 @@ export default function(state = initialState, action) {
         case 'DELETE_PRODUCTS':
             return {
                 ...state,
-                products: state.products.filter(cita => cita.id !== action.payload)
+                products: state.products.filter(product => product.id !== action.payload)
             }
         default:
             return state;

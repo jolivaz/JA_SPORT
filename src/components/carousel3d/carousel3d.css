@@ -1,0 +1,10 @@
+.carousel-3d-block,
+.carousel-3d-block-int,
+.carousel-3d-block-int img{
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+}
+.carousel-3d-block{
+    margin: 0 50px;
+}

@@ -14,6 +14,7 @@ import Footer from './components/footer/footer'
 import Search from './components/search/search'
 import Filter from './components/filter/filter'
 import Offer from './components/offer/offer'
+import ShowBrandsRecommended from './components/showBrandsRecommended/showBrandsRecommended'
 import { Provider } from 'react-redux'
 import store from './store';
 import './App.css'
@@ -51,7 +52,7 @@ function App() {
                          return(
                           <Fragment>
                               <Offer />
-                              <CarouselShoes />
+                              <ShowBrandsRecommended />
                           </Fragment>
                         )
                        }}/>  
@@ -62,7 +63,7 @@ function App() {
                          return(
                           <Fragment>
                               <Category categoryName={categoryName} />
-                              <CarouselShoes />
+                              <ShowBrandsRecommended />
                           </Fragment>
                         )
                        }}/>  

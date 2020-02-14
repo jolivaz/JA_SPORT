@@ -4,7 +4,7 @@ import "./footer.css";
 
 function Footer() {
 
-  const categories = ['zapatos','franelas','shorts','balones']
+  const categories = ['Zapatos','Franelas','Shorts','Balones']
 
   return (
     <footer id="footer" className="footer-1">

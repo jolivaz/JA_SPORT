@@ -7,6 +7,7 @@ import "./search.css";
 function Search() {
   let searchProducts = useSelector(state => state.products.searchProducts);
   const allProducts = useSelector(state => state.products);
+  
 
   // Dispatch wishlist to state
   const dispatch = useDispatch();
@@ -73,6 +74,7 @@ function Search() {
             </div>
           </Link>
         ))
+        
       ) : (
         <div>
           <h5>No se han encontrado resultados</h5>
