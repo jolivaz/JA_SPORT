@@ -1,7 +1,7 @@
 import React from 'react'
 import {useSelector} from 'react-redux'
 import Carousel3d from '../carousel3d/carousel3d'
-import './showBrandsRecommended.css'
+import './showBrandsRecommended.scss'
 
 function ShowBrandsRecommended() {
     let recommendedProducts = useSelector(state => state.products.recommended)
@@ -13,6 +13,7 @@ function ShowBrandsRecommended() {
           <div className="show-brands-recommended-carousels">
             <Carousel3d images={recommendedProducts.nike} />
             <Carousel3d images={recommendedProducts.adidas} />
+            <Carousel3d images={recommendedProducts.puma} />
           </div>
       </div>
   )

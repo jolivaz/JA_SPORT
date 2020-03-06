@@ -3,8 +3,8 @@ import { updateProductsAction } from "../../actions/productsActions";
 import { useDispatch, useSelector } from "react-redux";
 import CarouselMulti from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import "../../carouselMulti.css";
-import "./multiCarousel.css";
+import "../../carouselMulti.scss";
+import "./multiCarousel.scss";
 import { Link } from "react-router-dom";
 function MultiCarousel({ responsive, products }) {
   const allProducts = useSelector(state => state.products);

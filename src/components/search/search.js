@@ -2,7 +2,7 @@ import React from "react";
 import { updateProductsAction } from "../../actions/productsActions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "./search.css";
+import "./search.scss";
 
 function Search() {
   let searchProducts = useSelector(state => state.products.searchProducts);

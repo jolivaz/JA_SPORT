@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, withRouter } from 'react-router-dom';
-import './breadcrumb.css'
+import './breadcrumb.scss'
 
 function Breadcrumb({name,category}) {
     useEffect(() => {

@@ -2,7 +2,7 @@ import React from "react";
 import { updateProductsAction } from "../../actions/productsActions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "./wishList.css";
+import "./wishList.scss";
 
 function WishList() {
   let wishlistProducts = useSelector(state => state.products);

@@ -2,7 +2,7 @@ import React from "react";
 import { updateProductsAction } from "../../actions/productsActions";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import "./offer.css";
+import "./offer.scss";
 
 function Offer() {
   let offerProducts = useSelector(state => state.products);

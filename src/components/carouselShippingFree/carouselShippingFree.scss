@@ -1,0 +1,37 @@
+.section-free-shipping{
+    display: flex;
+    margin: 0;
+    align-items: center;
+    &.carousel-bg-light {
+        background-image: url(../../images/fondoShipping.jpg);
+    }
+    .carousel-multi-80 {
+        width: 80%;
+        margin: 0;
+    }
+    .section-free-shipping-title{
+        width: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 40px;
+        h5{
+            width: 100%;
+            font-weight: bold;
+            font-size: 32px;
+            color: #5E9706; 
+        }
+        span{
+            width: 100%;
+            font-size: 18px;
+        }
+    }
+}
+@media(max-width: 768px){
+    .section-free-shipping{
+        display: block;
+    }
+}
+
+
+

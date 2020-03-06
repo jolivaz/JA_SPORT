@@ -2,8 +2,8 @@ import React from 'react'
 import MultiCarousel from '../multiCarousel/multiCarousel'
 import 'react-multi-carousel/lib/styles.css'
 import { useSelector } from 'react-redux'
-import '../../carouselMulti.css'
-import './carouselShoes.css'
+import '../../carouselMulti.scss'
+import './carouselShoes.scss'
 
 function CarouselShoes() {
 

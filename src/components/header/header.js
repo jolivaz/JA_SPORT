@@ -3,7 +3,7 @@ import { searchProductsAction } from '../../actions/productsActions'
 import { Link, withRouter } from 'react-router-dom';
 import { useDispatch } from 'react-redux'
 import Logo from '../../logo.png'
-import './header.css'
+import './header.scss'
 
 function Header(props) {
     useEffect(() => {

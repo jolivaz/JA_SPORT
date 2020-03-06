@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FilterCategory from './filterCategory/filterCategory'
 import FormGroup from '@material-ui/core/FormGroup';
 import FilterBrand from './filterBrand/filterBrand'
-import "./filter.css";
+import "./filter.scss";
 
 function Filter() {
 

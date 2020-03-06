@@ -30,6 +30,7 @@ function App() {
                        render={() => (
                          <Fragment>
                             <Banner />
+                            <ShowBrandsRecommended />
                             <CarouselShippingFree />
                             <CarouselShirts />
                             <BannerSmall />

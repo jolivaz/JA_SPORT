@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './bannerSmall.css'
+import './bannerSmall.scss'
 
 
 function BannerSmall() {

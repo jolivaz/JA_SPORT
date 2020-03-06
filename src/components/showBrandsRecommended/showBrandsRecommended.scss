@@ -1,0 +1,17 @@
+.show-brands-recommended{
+    display: flex;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    h2{
+        color: #000;
+        font-style: italic;
+        max-width: 250px;
+    }
+    .show-brands-recommended-carousels{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

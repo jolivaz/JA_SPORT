@@ -1,7 +1,7 @@
 import React from 'react'
 import MultiCarousel from '../multiCarousel/multiCarousel'
 import { useSelector } from 'react-redux'
-import './carouselShorts.css'
+import './carouselShorts.scss'
 
 function CarouselShorts() {
 
