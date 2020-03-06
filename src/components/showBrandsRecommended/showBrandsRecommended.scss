@@ -1,11 +1,13 @@
+@import '../../variables.scss';
+
 .show-brands-recommended{
     display: flex;
     padding: 50px 0;
     align-items: center;
     justify-content: space-around;
-    background-color: #fff;
+    background-color: $color_white;
     h2{
-        color: #000;
+        color: $color_black;
         font-style: italic;
         max-width: 250px;
     }

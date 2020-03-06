@@ -1,10 +1,12 @@
+@import '../../variables.scss';
+
 .section-search{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 15px;
     padding: 30px 40px;
-    background: #ffffff;
+    background: $color_white;
     .search-product{
         width: 23%;
         margin: 1%;
@@ -30,7 +32,7 @@
                 align-items: center;
                 justify-content: space-between;
                 h5 {
-                    color: #000;
+                    color: $color_black;
                     font-size: 22px;
                     text-align: left;
                     margin-bottom: 0;
@@ -40,7 +42,7 @@
         }
         .search-item-name-brand span{
             display: block;
-            color: #EE1E09;
+            color: $color_red;
         }
         
         .search-item-price {
@@ -62,7 +64,7 @@
             min-height: 60px;
             align-items: center;
             justify-content: space-around;
-            border-bottom: 1px solid #C3C6BF;
+            border-bottom: 1px solid $color_grey;
             span{
                 display: block;
             }
@@ -74,7 +76,7 @@
             
             .search-item-prices-descount span{
                 font-size: 28px;
-                color: #98FF04;
+                color: $color_green;
                 font-weight: bold;
             }
             

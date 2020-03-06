@@ -1,24 +1,27 @@
 import React, { useState,useEffect } from 'react'
 import { searchProductsAction } from '../../actions/productsActions'
-import { Link, withRouter } from 'react-router-dom';
-import { useDispatch } from 'react-redux'
+import HeaderSearch from '../headerSearch/headerSearch'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link, withRouter } from 'react-router-dom'
 import Logo from '../../logo.png'
 import './header.scss'
 
 function Header(props) {
     useEffect(() => {
         window.scrollTo(0, 0)
+        document.body.addEventListener('click', handleOutSearchHeader);
       });
     const [searchValue, guardarSearchValue] = useState('');
     const [showMenu, guardarShowMenu] = useState(false);
+    const [flagWriting, guardarflagWriting] = useState(false);
     const [classNameMenuMobile, guardarclassNameMenuMobile] = useState('menu-header')
     const [classIconCloseMobile, guardarclassIconCloseMobile] = useState('fas fa-times-circle')
     const categories = ['Zapatos','Franelas','Shorts','Balones']
     //dispatch search
     const dispatch = useDispatch();
     const agregarBusqueda = (value) => dispatch( searchProductsAction(value) );
+    const searchProducts = useSelector(state => state.products.searchProducts).slice(0, 5);
     const handleSearch = () => {
-        agregarBusqueda(searchValue)
         props.history.push('/search')
     }
     const handleShowMenu = (e) => {
@@ -32,6 +35,20 @@ function Header(props) {
             guardarclassIconCloseMobile('fas fa-times-circle')
         }
     }
+    const handleOutSearchHeader = e => {
+        if(e.srcElement.className !== 'body header-products-search') {
+            setTimeout(()=> {guardarflagWriting(false)},500)
+        }
+    }
+    const handleWriting = (e) => {
+        guardarSearchValue(e.target.value)       
+        agregarBusqueda(e.target.value)
+        if (e.target.value === '') {
+            guardarflagWriting(false)
+        } else {
+            guardarflagWriting(true)
+        }   
+    }
     return(
         <nav className="header-app">
             <Link to="/"className="logo" >
@@ -41,13 +58,26 @@ function Header(props) {
             <i className={classIconCloseMobile} onClick={e => handleShowMenu(e)}></i>
             <div className={classNameMenuMobile}>
                 <div className="header-app-search">
-                    <input 
-                        onKeyDown={ (e) => e.keyCode === 13 ? handleSearch() : null }
-                        placeholder="Escriba el producto que busca" 
-                        onChange={(e) =>guardarSearchValue(e.target.value)} />
-                    <Link to='/search' className="logo-search" >
-                        <i className="fas fa-search" onClick={() => handleSearch()}></i>
-                    </Link>
+                    <div className="header-app-input-search">
+                        <input 
+                            onKeyDown={ (e) => e.keyCode === 13 ? handleSearch() : null }
+                            value={searchValue}
+                            placeholder="Escriba el producto que busca" 
+                            onChange={(e) => handleWriting(e)} />
+                        <Link to='/search' className="logo-search" >
+                            <i className="fas fa-search" onClick={() => handleSearch()}></i>
+                        </Link>
+                    </div>
+                    {
+                        flagWriting ? 
+                        <HeaderSearch 
+                            onClick={() => guardarflagWriting(true)}
+                            history={props.history}
+                            searchProducts={searchProducts}
+                            guardarflagWriting={guardarflagWriting} /> 
+                        : null
+                    }
+                    
                 </div>
                 <div className="lista" id="navbarText">
                     <ul className="items-top">

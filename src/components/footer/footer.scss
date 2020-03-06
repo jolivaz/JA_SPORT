@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 footer .main-footer {
   padding: 20px 0;
   background: #252525;
@@ -92,11 +94,11 @@ footer.light .footer-copyright {
   margin-bottom: 18px;
 }
 .widget li a {
-  color: #fff;
+  color: $color_white;
 }
 .widget li a:hover {
-  color: #f40909;
-  background: #fff;
+  color: $color_red;
+  background: $color_white;
 }
 .widget-title {
   margin-bottom: 20px;
@@ -139,7 +141,7 @@ footer.light .footer-copyright {
 .typo-light div,
 .typo-light span,
 .typo-light small {
-  color: #fff;
+  color: $color_white;
 }
 
 ul.social-footer2 {
@@ -152,7 +154,7 @@ ul.social-footer2 li {
     display: inline-block;
 }
 ul.social-footer2 li a:hover {
-  background-color: #f40909;
+  background-color: $color_red;
 }
 ul.social-footer2 li a {
     width: 30px;
@@ -161,16 +163,16 @@ ul.social-footer2 li a {
   text-align: center;
 }
 .btn {
-    color: #fff;
+    color: $color_white;
     font-weight: bold;
-    background-color: #f40909;
+    background-color: $color_red;
 }
 .btn:hover,
 .btn:focus,
 .btn.active {
-  color: #f40909;
+  color: $color_red;
   font-weight: bold;
-  background: #fff;
+  background: $color_white;
   transition: all 250ms ease-in-out 0s;
   -o-transition: all 250ms ease-in-out 0s;
   -ms-transition: all 250ms ease-in-out 0s;

@@ -1,7 +1,9 @@
+@import '../../variables.scss';
+
 .breadcrumb{
     display: flex;
     padding: 5px 15px;
-    background: #eee;
+    background: $color_grey_light;
     align-items: center;
     justify-content: left;
     a{
@@ -10,11 +12,11 @@
             cursor: pointer;
             margin: 0 5px;
             font-size: 15px;
-            color: #9e9e9e;
+            color: $color_grey;
         }
     }
     .breadcrumb-icon{
-        color: #9e9e9e; 
+        color: $color_grey; 
         font-size: 12px!important;
     }
     .breadcrumb-nav.active{

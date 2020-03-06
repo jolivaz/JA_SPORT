@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .section-wishlist{
     width: 80%;
     margin: 0 auto;
@@ -6,6 +8,7 @@
         width: 80%;
         display: flex;
         margin: 15px auto;
+        padding: 20px 10px;
         box-shadow: 1px 3px 5px 0px rgba(0,0,0,0.75);
         img {
             width: 90%;
@@ -27,7 +30,7 @@
             align-items: center;
             justify-content: space-between;
             h5 {
-                color: #000;
+                color: $color_black;
                 font-size: 22px;
                 text-align: left;
                 margin-bottom: 0;
@@ -37,7 +40,7 @@
         .wishlist-item-name-brand{
             span{
                 display: block;
-                color: #EE1E09;
+                color: $color_red;
             }
         }
         .wishlist-item-price {
@@ -60,7 +63,6 @@
             min-height: 60px;
             align-items: center;
             justify-content: space-around;
-            border-bottom: 1px solid #C3C6BF;
         }
         
         .wishlist-item-prices-mount span{
@@ -74,7 +76,7 @@
         
         .wishlist-item-prices-descount span{
             font-size: 28px;
-            color: #98FF04;
+            color: $color_green;
             font-weight: bold;
         }
         

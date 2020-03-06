@@ -3,10 +3,6 @@ import { Link, withRouter } from 'react-router-dom';
 import './breadcrumb.scss'
 
 function Breadcrumb({name,category}) {
-    useEffect(() => {
-        console.log('props',name, category)
-      });
-
     return(
         <div className="breadcrumb">
             <Link to="/">

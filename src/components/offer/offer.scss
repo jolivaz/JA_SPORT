@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .section-offer{
     width: 90%;
     display: flex;
@@ -25,7 +27,7 @@
                 align-items: center;
                 justify-content: space-between;
                 h5 {
-                    color: #000;
+                    color: $color_black;
                     font-size: 22px;
                     text-align: left;
                     margin-bottom: 0;
@@ -35,7 +37,7 @@
             .offer-item-name-brand{
                 span{
                     display: block;
-                    color: #EE1E09;
+                    color: $color_red;
                 }
             }
             .offer-item-price {
@@ -55,7 +57,7 @@
                 min-height: 60px;
                 align-items: center;
                 justify-content: space-around;
-                border-bottom: 1px solid #C3C6BF;
+                border-bottom: 1px solid $color_grey;
                 .offer-item-prices-mount span{
                     display: block;
                 }
@@ -67,7 +69,7 @@
 
                 .offer-item-prices-descount span{
                     font-size: 28px;
-                    color: #98FF04;
+                    color: $color_green;
                     font-weight: bold;
                 }
 

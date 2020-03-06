@@ -60,7 +60,7 @@ function Footer() {
                 <h5 className="widget-title">
                   Se parte de nosotros<span></span>
                 </h5>
-                <p>Ten descuentos los mejores descuentos.</p>
+                <p>Ten los mejores descuentos.</p>
               </div>
             </div>
 
@@ -70,7 +70,7 @@ function Footer() {
                   Estamos ubicados<span></span>
                 </h5>
                 <p title="glorythemes">
-                  Machain 4116, Buenos Aires. Argentina
+                  Machain 1234, Buenos Aires. Argentina
                 </p>
               </div>
             </div>

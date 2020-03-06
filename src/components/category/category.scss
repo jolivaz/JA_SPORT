@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .section-category-all{
     padding-top: 90px;
     .title-category{
@@ -5,7 +7,7 @@
         font-weight: bold;
         padding: 30px 10px;
         padding-bottom: 15px;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid $color_grey;
     }
     .section-category{
         width: 90%;
@@ -34,7 +36,7 @@
                     justify-content: space-between;
                     .category-item-name-brand{
                         h5 {
-                            color: #000;
+                            color: $color_black;
                             font-size: 22px;
                             text-align: left;
                             margin-bottom: 0;
@@ -42,7 +44,7 @@
                         }
                         span{
                             display: block;
-                            color: #EE1E09;
+                            color: $color_red;
                         }
                     }
                 }
@@ -53,7 +55,7 @@
                     min-height: 60px;
                     align-items: center;
                     justify-content: space-around;
-                    border-bottom: 1px solid #C3C6BF;
+                    border-bottom: 1px solid $color_grey_light;
                     .category-item-prices-mount{
                         .mount-discount{
                             display: block;
@@ -77,7 +79,7 @@
                     }
                     .category-item-prices-descount span{
                         font-size: 28px;
-                        color: #98FF04;
+                        color: $color_green;
                         font-weight: bold;
                     }
                     .category-item-price {
